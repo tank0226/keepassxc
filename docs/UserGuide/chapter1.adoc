@@ -1,0 +1,126 @@
+= Chapter 1: Getting Started
+KeePassXC Team <team@keepassxc.org>
+v2.6.0, 2020-03-26
+:toc: left
+:imagesdir: images
+:homepage: https://keepassxc.org
+:icons: font
+
+KeePassXC is a modern open-source password manager. It is used to store and manage information such as URLs, usernames, passwords, and so on for various accounts on your web applications. KeePassXC stores the passwords in an encrypted format and provides secure access to all the your information with the help of a master password.
+
+KeePassXC is helpful for people with extremely high demands of secure personal data management. It saves many different information, such as user names, passwords, URLs, attachments, and comments in one single database. For a better management, user-defined titles and icons can be specified for different entries in KeePassXC. In addition, the entries are sorted in customizable groups. The integrated search function allows to search in a single group or the complete database.
+
+KeePassXC also provides a secure, customizable, fast, and easy-to-use password generator utility. This utility is very helpful to those who generate passwords frequently.
+
+= Downloading KeePassXC
+KeePassXC is available for download for the following operating systems and platforms:
+
+* Linux - Official Cross-Distribution Packages
+** AppImage
+** Snap Package
+* Linux - Distribution-Specific Packages
+** Ubuntu
+** Debian
+** Arch Linux
+** Gentoo
+** Fedora
+** CentOS
+** OpenSUSE
+* macOS
+** DMG Installer
+** Homebrew Cask
+* Microsoft Windows
+** 64-bit - Portable and MSI Installer
+** 32-bit - Portable and MSI Installer 
+
+To download the KeePassXC installer for the desired platform, visit https://keepassxc.org/download.
+
+NOTE: KeePassXC is open-source software and may be available on other websites that are unaffiliated with Team KeePassXC. We recommend obtaining this software from https://keepassxc.org only if you are in doubt.
+
+Before installing KeePassXC, it is recommended that you verify that your downloaded installer matches the signature, which is published alongside the release package. By verifying the signatures of KeePassXC releases, you can verify the authenticity and integrity of the downloaded installation file. This guarantees that the file you downloaded was originally created by the KeePassXC Team and its contents have not been tampered with.
+
+To know more about the steps to verify the authenticity and integrity of your downloaded package, visit https://keepassxc.org/verifying-signatures.
+
+The Windows MSI installer is signed by a secure certificate owned by DroidMonkey Apps, LLC. If you do not see this dialog when installing the application, click DENY and download the installed again from https://keepassxc.org.
+
+image::ch1_uac_dialog.png[UAC Dialog Example, 350, align="center"]
+
+= Installing KeePassXC
+Installing KeePassXC is a simple process. In the following example, installation steps for KeePassXC on Microsoft Windows are described. Installing KeePassXC on other operating systems is also a simple process, which you can accomplish by using the native installers. To know more about the installation instructions on the other operating systems, refer to the KeePassXC User Manual.
+
+To install KeePassXC on Microsoft Windows, perform the following steps:
+
+1. Double click on the KeePassXC-Y.Y.Y-WinZZ.msi file. Here, Y.Y.Y represents the version of the software and ZZ represents the 32-bit/64-bit version of the Microsoft Windows operating system.
+
+image::ch1_install_wizard.png[Microsoft Windows Installation, 450, align="center"]
+
+[start=2]
+2. Click Next and follow the simple instructions on the KeepPassXC Setup Wizard to complete the installation.
+
+= Creating Your First Database
+To start using KeePassXC, you need to first create a database that will store the password and other details.
+
+To create a database, perform the following steps:
+
+1. Open your KeePassXC application. The following screen appears:
+
+image::ch1_welcome_screen.png[KeePassXC Welcome Screen, 450, align="center"]
+
+[start=2]
+2. Click the Create new database button. The General Database Information screen appears.
+
+image::ch1_new_db_wizard1.png[New Database Wizard - General Database Information, 450, align="center"]
+
+[start=3]
+3. Enter a name for your database in the Database Name field. If you do not enter a name in this field on this screen, you will be prompted to provide a name when you finish creating the database.
+
+4. _(Optional)_ Enter desired details in the Description field.
+
+5. Click Continue. The Encryption Settings screen appears.
+
+image::ch1_new_db_wizard2.png[New Database Wizard - Encryption Settings, 450, align="center"]
+
+[start=6]
+6. Drag the Decryption Time slider based on your encryption strength of your database. Setting the Decryption Time slider at a higher values means that the database will have higher level of protection but the time taken by the database to open will increase.
+
+7. Select the Database format from the following options available in the drop-down list.
+* KDBX 4.0 (recommended)
+* KBX 3.1
+
+8. _(Optional)_ Click the Advanced Settings to provide additional settings for your database.
+
+9. Click the Continue button. The Database Master Key screen appears:
+
+image::ch1_new_db_wizard3.png[New Database Wizard - Master Key, 450, align="center"]
+
+[start=10]
+10. Enter a strong password for your database on this screen.
+
+NOTE: Keep this password for your database safe. Either memorize it or note it down somewhere. Losing the database password might result in permanent locking of your database and you will not be able to retrieve information stored in the database.
+
+[start=11]
+11. Click Done. You are prompted to select a location to save your database file and complete creating a your database with basic settings. The database file is saved on to your computer with the default .kdbx extension. 
+
+= Opening an Existing Database
+To open an existing database, perform the following steps:
+
+1. Open your KeePassXC application. The following screen appears:
+
+image::ch1_welcome_screen.png[KeePassXC Welcome Screen, 450, align="center"]
+
+[start=2]
+2. Click the Open existing database button.
+
+3. Navigate to the location of the your database on your computer and open the database file. The following screen appears:
+
+image::ch1_unlock_db.png[Unlock Database Screen, 450, align="center"]
+
+[start=4]
+4. Enter the password for your database.
+
+5. Browse for the Key File if you have chosen it as an additional authentication factor while creating the database. Refer to KeePassXC User Guide for more information on setting Key File as an additional authentication factor.
+
+6. Click OK. The database opens and the following screen is displayed:
+
+image::ch1_database_view.png[Unlocked Database View, 450, align="center"]
+
