@@ -1,0 +1,154 @@
+= Chapter 2: Advanced Operations
+
+== Importing External Databases
+KeePassXC allows your to import external databases from the following options:
+
+* KeePass 1 Database
+* Comma-Separated Values (CSV) file
+
+=== Importing KeePass 1 Database
+KeePass 1 database is an older format of the database created using legacy version of KeePass. KeePassXC lets your import this older format of the database and you can seamlessly start using this database in your new KeePassXC application.
+
+To import a KeePass 1 database file in KeePassXC, perform the following steps: 
+
+1. Open KeePassXC.
+
+2. Click Import from KeePass 1 button on the welcome screen or use the menu Database > Import > KeePass 1 Database.
+
+3. Navigate to the location of the your legacy KeePass 1 database file (`.kdb`) on your computer and open the file. You are prompted for the password and the Key file for your `.kdb` file.
+
+4. Enter the password for your old `.kdb` file and click *OK*. You are prompted for provide a name for the new database format that KeePassXC recognizes.
+
+5. Provide a name for the new database format, select a folder on your computer to save the file, and click Save.
+
+6. The data from the `.kdb` file gets imported and converted to the new format, which is compatible with KeePassXC. You can now start using the new database file (`.kdbx`) in KeePassXC. 
+
+=== Importing CSV File
+If you have been saving your URLs, usernames, passwords, and so on in a CSV file, you can migrate all that information from the CSV file to KeePassXC and start using KeePassXC to maintain your data.
+
+To open the CSV file, perform the following steps:
+
+1. Open KeePassXC.
+
+2. Click Import from CSV button on the welcome screen or use the menu Database > Import > CSV File.
+
+3. Navigate to the location of the your CSV file on your computer and open the file. The new database wizard will appear. Follow the steps of creating a new database in Chapter 1.
+
+4. After saving your new database file, the CSV import wizard will appear:
++
+----
+Insert CSV Wizard image here
+----
+
+Your CSV file gets imported to KeePassXC and the data is converted to the KeePassXC format for further usage and maintenance. The new database file is saved on to your computer with the default `.kdbx` extension.
+
+== KeePassXC-Browser Extension
+The KeePassXC-Browser extension is a software plug-in for your web browser that you can use to automatically pull your data from KeePassXC and populate them directly into the fields of your web-based application. It is a very useful plug-in that enhances your productivity by saving time. You do not need to manually copy the data from your KeePassXC database and paste them in the fields in the websites.
+
+The KeePassXC-Browser extension is available on the following web browsers:
+
+* Google Chrome, Vivaldi, and Brave
+* Mozilla Firefox and Tor Browser
+* Microsoft Edge
+* Chromium
+
+=== Downloading Browser Extension
+You can download the KeePassXC-Browser extension from your web browser. In this section, the step to download the KeePassXC-Browser extension for Google Chrome are described.
+
+To download the KeePassXC-Browser extension, perform the following steps:
+
+1. Open Google Chrome and go to https://chrome.google.com/webstore/category/extensions.
+
+2. In the Search the store field, type KeePassXC-Browser and press Enter. The following screen appears:
++
+--
+image::ch2_extension_store.png[Chrome Extension Store, 450, align="center"]
+--
+
+3. From the search results, click on the Add to Chrome button. The following screen appears:
++
+--
+image::ch2_extension_confirm.png[Confirm Add Extension Dialog, 450, align="center"]
+--
+
+4. Click the Add extension button from the pop-up window. The KeePassXC-Browser extension gets added to Google Chrome.
+
+=== Configuring KeePassXC-Browser
+To start using KeePassXC-Browser, you must configure it so that it can communicate with the KeePassXC application on your desktop.
+
+To configure KeePassXC-Browser, perform the following steps:
+
+1. Open the KeePassXC application on your desktop and navigate to Tools > Settings.
+
+2. Click the Browser Integration option on the left-hand side. The following screen appears:
++
+--
+image::ch2_browser_settings.png[KeePassXC Browser Settings, 450, align="center"]
+--
+
+3. Under the Enable integrations for these browsers section, select the browsers for which you have downloaded the KeePassXC-Browser plug-in and click *OK*.
+
+4. Open your browser for which you have downloaded the KeePassXC-Browser plug-in.
+
+5. Click the KeePassXC-Browser plug-in icon in your browser (see figure). A pop-up window appears as shown in the following screen:
++
+--
+image::ch2_extension_connect.png[Connect Extension to KeePassXC, 450, align="center"]
+--
+
+6. Click the Connect button in the pop-up window to complete integrating the KeePassXC-Browser plug-in with your KeePassXC desktop application. 
+
+
+7. If you connect the KeePassXC-Browser for the first time, you are prompted to enter a unique name to identify the connection. Enter a unique name in the field and click the Save and allow access button.
++
+--
+image::ch2_extension_association.png[Extension Association Dialog, 350, align="center"]
+--
+
+== Populating Database Entries to Websites
+The KeePassXC-Browser plug-in lets you automatically populate the entries from your KeePassXC database into the fields on the websites. To do so, perform the following steps:
+
+1.   Open your KeePassXC desktop application.
+
+2.   Open your web browser and open your website for which you have stored the URL, user name and password in the KeePassXC database.
++
+The KeePassXC-Browser plug-in icon in your browser window automatically turns green when you open your KeePassXC desktop application. The green icon indicates that the KeePassXC desktop application is connected and communicating with the KeePassXC-Browser plug-in. The grey icon indicates that the KeePassXC desktop application is not connected with the KeePassXC-Browser plug-in.
++
+----
+ADD CONNECTED/NOT-CONNECTED ICON DESCRIPTION
+----
+
+3. If the KeePassXC desktop application is not connected with the KeePassXC-Browser plug- in, click the grey KeePassXC-Browser plug-in icon in your web browser and click Reload from the pop-up window as shown in the following screen.
++
+--
+image::ch2_extension_reload.png[Reload Extension Connection, 350, align="center"]
+--
+
+4. Open the URL for which you want to auto-populate the field values stores in your database. The KeePassXC-Browser Confirm Access window appears.
++
+----
+ADD NEW CONFIRM ACCESS DIALOG HERE
+----
+
+5. Select the entry from the window and click Allow.
+
+6. In your website, click inside your USER ID field, and select your username, which automatically gets extracted from your KeePassXC database. The username and the password automatically get populated  in the respective fields.
++
+--
+image::ch2_extension_credentials_populated.png[Populated Credentials from Browser Extension, 450, align="center"]
+--
+
+== Storing Database File
+The database file that you create might contain highly sensitive data and must be stored in a very secure way. You must make sure that the database is always protected with a strong and long password. The database file that is protected with a strong and long password is secure and encrypted while stored on your computer or cloud storage service.
+
+Make sure that the database file is stored in a folder that is secure. Make sure that you or someone else does not accidentally delete the database file. Deletion of the database file results in a lot of inconvenience because you will need to manually retrieve the lost information for your various web applications. You must not share your database file with anyone unless absolutely necessary.
+
+==  Backing up Database File
+It is a good practice to create copies of your database file and store the copies of your database on different computer, smart phone, or cloud storage space such a Google Drive or Microsoft OneDrive.
+
+Creating backups for your database give you a peace of mind should you lose one copy of your database. You can quickly retrieve the copy of your database and start using it.
+
+==  Sharing Database File
+If there is a need to share the database file with anyone, make sure that it is protected with a strong password. It is recommended that you also protect your database file with a Key file as well.
+
+NOTE: Do not share the database file, password, and the Key File in a single communication. Send them separately through different messages.
