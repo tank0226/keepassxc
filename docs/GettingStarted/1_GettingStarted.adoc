@@ -1,4 +1,4 @@
-= Chapter 1: Getting Started
+= Getting Started
 
 KeePassXC is a modern open-source password manager. It is used to store and manage information such as URLs, usernames, passwords, and so on for various accounts on your web applications. KeePassXC stores the passwords in an encrypted format and provides secure access to all the your information with the help of a master password.
 

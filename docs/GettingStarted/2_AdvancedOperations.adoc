@@ -1,4 +1,4 @@
-= Chapter 2: Advanced Operations
+= Advanced Operations
 
 == Importing External Databases
 KeePassXC allows your to import external databases from the following options:

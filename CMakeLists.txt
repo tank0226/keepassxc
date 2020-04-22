@@ -418,16 +418,6 @@ elseif(MINGW)
     endif()
 endif()
 
-if(WITH_XC_DOCS)
-    add_subdirectory(docs)
-    find_program(ASCIIDOCTOR_EXE asciidoctor ENV PATH)
-    if(NOT ASCIIDOCTOR_EXE)
-        message(FATAL_ERROR "asciidoctor is required to build documentation")
-    else()
-        message(STATUS "Using asciidoctor: ${ASCIIDOCTOR}")
-    endif()
-endif()
-
 # Debian sets the the build type to None for package builds.
 # Make sure we don't enable asserts there.
 set_property(DIRECTORY APPEND PROPERTY COMPILE_DEFINITIONS_NONE QT_NO_DEBUG)
@@ -491,6 +481,10 @@ add_subdirectory(share)
 if(WITH_TESTS)
     add_subdirectory(tests)
 endif(WITH_TESTS)
+
+if(WITH_XC_DOCS)
+    add_subdirectory(docs)
+endif()
 
 if(PRINT_SUMMARY)
     # This will print ENABLED, REQUIRED and DISABLED

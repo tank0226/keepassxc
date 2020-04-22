@@ -5,12 +5,12 @@ v2.6.0, 2020-03-26
 :data-uri:
 :homepage: https://keepassxc.org
 :icons: font
-:stylesheet: dark.css
+:stylesheet: ../dark.css
 :toc: left
 ifdef::backend-pdf[]
 :title-page:
 :title-logo-image: {imagesdir}/kpxc_logo.png
-:pdf-theme: pdf_theme.yml
+:pdf-theme: ../pdf_theme.yml
 :compress:
 endif::[]
 
@@ -29,8 +29,8 @@ Team KeePassXC
 
 :leveloffset: +1
 
-include::chapter1.adoc[]
+include::1_GettingStarted.adoc[]
 
-include::chapter2.adoc[]
+include::2_AdvancedOperations.adoc[]
 
 :leveloffset: -1
