@@ -65,11 +65,12 @@ fi
 # If the icon name is unknown, outputs nothing.
 map() {
     case "$1" in
-        application-exit)                   echo exit-to-app                    ;;
+        application-exit)                   echo exit-run                       ;;
         auto-type)                          echo keyboard-variant               ;;
         bugreport)                          echo bug-outline                    ;;
         chronometer)                        echo clock-outline                  ;;
-        configure)                          echo settings-outline               ;;
+        clipboard-text)                     echo clipboard-text-outline         ;;
+        configure)                          echo cog-outline                    ;;
         database-change-key)                echo key                            ;;
         database-close)                     echo close                          ;;
         database-lock)                      echo lock-outline                   ;;
@@ -81,20 +82,22 @@ map() {
         dialog-warning)                     echo alert-outline                  ;;
         document-close)                     echo close                          ;;
         document-edit)                      echo pencil                         ;;
+        document-export)                    echo export                         ;;
+        document-import)                    echo import                         ;;
         document-new)                       echo plus                           ;;
         document-open)                      echo folder-open-outline            ;;
+        document-open-recent)               echo folder-clock-outline           ;;
         document-properties)                echo file-edit-outline              ;;
         document-save)                      echo content-save-outline           ;;
         document-save-as)                   echo content-save-all-outline       ;;
         donate)                             echo gift-outline                   ;;
         edit-clear-locationbar-ltr)         echo backspace-reverse-outline      ;;
         edit-clear-locationbar-rtl)         echo backspace-outline              ;;
-        entry-clone)                        echo comment-multiple-outline       ;;
-        entry-delete)                       echo comment-remove-outline         ;;
-        entry-edit)                         echo comment-edit-outline           ;;
-        entry-new)                          echo comment-plus-outline           ;;
+        entry-clone)                        echo plus-circle-multiple-outline   ;;
+        entry-delete)                       echo close-circle-outline           ;;
+        entry-edit)                         echo pencil-circle-outline          ;;
+        entry-new)                          echo plus-circle-outline            ;;
         favicon-download)                   echo download                       ;;
-        freedesktop)                        echo freedesktop-dot-org            ;;
         getting-started)                    echo lightbulb-on-outline           ;;
         group-delete)                       echo folder-remove-outline          ;;
         group-edit)                         echo folder-edit-outline            ;;
@@ -103,8 +106,8 @@ map() {
         health)                             echo heart-pulse                    ;;
         help-about)                         echo information-outline            ;;
         internet-web-browser)               echo web                            ;;
-        key-enter)                          echo keyboard-variant               ;;
         keyboard-shortcuts)                 echo apple-keyboard-command         ;;
+        key-enter)                          echo keyboard-variant               ;;
         message-close)                      echo close                          ;;
         object-locked)                      echo lock-outline                   ;;
         object-unlocked)                    echo lock-open-variant-outline      ;;
@@ -114,9 +117,10 @@ map() {
         password-generator)                 echo dice-3-outline                 ;;
         password-show-off)                  echo eye-off-outline                ;;
         password-show-on)                   echo eye-outline                    ;;
-        preferences-other)                  echo file-document-edit-outline     ;;
         preferences-desktop-icons)          echo emoticon-happy-outline         ;;
+        preferences-other)                  echo file-document-edit-outline     ;;
         preferences-system-network-sharing) echo lan                            ;;
+        refresh)                            echo refresh                        ;;
         reports)                            echo lightbulb-on-outline           ;;
         reports-exclude)                    echo lightbulb-off-outline          ;;
         security-high)                      echo shield-outline                 ;;
@@ -144,7 +148,7 @@ find application -type f -name "*.svg" | while read -r DST;do
     # Find the base name of the svg file for this icon
     MAT=$(map $NAME)
     if [[ -z $MAT ]];then
-        echo "Warning: Don't know about $NAME"
+        echo "Warning: No MaterialDesign mapping for $NAME"
         continue
     fi
 
@@ -152,7 +156,7 @@ find application -type f -name "*.svg" | while read -r DST;do
     SRC="$MATERIAL/svg/$MAT.svg"
     if [ ! -f "$SRC" ];then
         echo "Error: Source for $NAME doesn't exist: $SRC"
-        exit 1
+        continue
     fi
 
     # Replace the icon file with the source file

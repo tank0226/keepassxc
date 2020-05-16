@@ -140,9 +140,12 @@ Files: share/icons/application/scalable/categories/preferences-other.svg
        share/icons/application/scalable/status/security-high.svg
        share/icons/application/scalable/mimetypes/application-x-keepassxc.svg
        share/icons/application/scalable/actions/document-close.svg
-       share/icons/application/scalable/actions/application-exit.svg
-       share/icons/application/scalable/actions/database-change-key.svg
-       share/icons/application/scalable/actions/group-new.svg
+       share/icons/application/scalable/actions/document-edit.svg
+       share/icons/application/scalable/actions/document-export.svg
+       share/icons/application/scalable/actions/document-import.svg
+       share/icons/application/scalable/actions/document-new.svg
+       share/icons/application/scalable/actions/document-open.svg
+       share/icons/application/scalable/actions/document-open-recent.svg
        share/icons/application/scalable/actions/document-properties.svg
        share/icons/application/scalable/actions/group-empty-trash.svg
        share/icons/application/scalable/actions/statistics.svg

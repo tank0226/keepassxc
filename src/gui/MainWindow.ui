@@ -244,9 +244,11 @@
      <property name="title">
       <string>&amp;Import</string>
      </property>
-     <addaction name="actionImportKeePass1"/>
-     <addaction name="actionImportOpVault"/>
+     <property name="icon">
+      <iconset resource="../../share/icons/icons.qrc">
      <addaction name="actionImportCsv"/>
+     <addaction name="actionImportOpVault"/>
+     <addaction name="actionImportKeePass1"/>
     </widget>
     <widget class="QMenu" name="menuExport">
      <property name="title">
@@ -262,9 +264,9 @@
     <addaction name="actionDatabaseSaveAs"/>
     <addaction name="actionDatabaseClose"/>
     <addaction name="separator"/>
-    <addaction name="actionChangeMasterKey"/>
     <addaction name="actionReports"/>
-    <addaction name="actionChangeDatabaseSettings"/>
+    <addaction name="actionDatabaseSettings"/>
+    <addaction name="actionChangeMasterKey"/>
     <addaction name="separator"/>
     <addaction name="actionDatabaseMerge"/>
     <addaction name="menuImport"/>
@@ -564,7 +566,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string>&amp;Reports...</string>
+    <string>&amp;Database Reports...</string>
    </property>
    <property name="toolTip">
     <string>Statistics, health check, etc.</string>
@@ -573,7 +575,7 @@
     <enum>QAction::NoRole</enum>
    </property>
   </action>
-  <action name="actionChangeDatabaseSettings">
+  <action name="actionDatabaseSettings">
    <property name="enabled">
     <bool>false</bool>
    </property>
@@ -703,7 +705,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string>&amp;Export to CSV File…</string>
+    <string>&amp;CSV File…</string>
    </property>
   </action>
   <action name="actionExportHtml">
@@ -711,7 +713,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string>&amp;Export to HTML File…</string>
+    <string>&amp;HTML File…</string>
    </property>
   </action>
   <action name="actionImportKeePass1">
